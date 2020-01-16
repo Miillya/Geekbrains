@@ -60,7 +60,7 @@ elif 18 <= age <= 30 and 40 <= index_ketle or age >= 30 and 41 <= index_ketle:
 else:
     health_result += 'Вы ввели неккоректные значения. Попробуйте ещё раз!'
 
-answer = 'Уважаемый, ' + first_name + ' ' + last_name + '. ' + health_result + '\n'
+answer = first_name + ' ' + last_name + '. ' + health_result + '\n'
 
 print(answer)
 print('***********************************************************************************************************'
