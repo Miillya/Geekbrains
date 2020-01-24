@@ -13,10 +13,10 @@ print(my_list_2)
 for item in my_list_2:
     if item in my_list_1:
         my_list_1.remove(item)
-print(my_list_1)
+print(f'Вариант №1\n', my_list_1)
 
 # Вариант №2
 for next_value in my_list_2:
     while my_list_1.count(next_value)!=0:
         my_list_1.remove(next_value)
-print(my_list_1)
+print(f'Вариант №2\n', my_list_1)
