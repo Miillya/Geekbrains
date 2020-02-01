@@ -19,12 +19,12 @@ answer = ''
 number = random.randint(START, END)
 
 while not answer == "=":
-    print(f'Вы загадали число - ', round(number), '?')
+    print(f'Вы загадали число - {number}?')
     print(f'Введите знак "=" - если компьютер угадал Ваше число, ">" - если число больше, "<" - если число меньше')
     answer = input('Введите Ваш знак: ')
     count += 1
     if answer == '=':
-        print(f'Компьютер угадал число - {round(number)} с {count}-й попытки!')
+        print(f'Компьютер угадал число - {number} с {count}-й попытки!')
         exit()
     elif START == END:
         print(f'Единственное возможное число: {number}')
