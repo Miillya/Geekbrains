@@ -10,13 +10,20 @@
 # ### В теле функция должна получить параметр damage атакующего и отнять это количество от health атакуемого.
 # Функция должна сама работать со словарями и изменять их значения.
 #
+# 4: Давайте усложним предыдущее задание. Измените сущности, добавив новый параметр - armor = 1.2 (величина брони персонажа)
+# Теперь надо добавить новую функцию, которая будет вычислять и возвращать полученный урон по формуле damage / armor
+# Следовательно, у вас должно быть 2 функции:
+# Наносит урон. Это улучшенная версия функции из задачи 3.
+# Вычисляет урон по отношению к броне.
+#
+# Примечание. Функция номер 2 используется внутри функции номер 1 для вычисления урона и вычитания его из здоровья персонажа.
 
 def attack(p1, p2):
     p1['health'] = p1['health'] - p2['damage'] // p1['armor']
     return p1['health']
 
 
-player = {'name': '', 'health': 150, 'damage': 50, 'armor': 1.4}
+player = {'name': '', 'health': 175, 'damage': 55, 'armor': 1.8}
 enemy = {'name': '', 'health': 100, 'damage': 75, 'armor': 1.7}
 
 player['name'] = input('Введите имя Вашего персонажа: ')
@@ -28,13 +35,16 @@ while player['health'] > 0 or enemy['health'] > 0:
     count += 1
     player['health'] = attack(player, enemy)
     if player['health'] < 0:
-        print(player)
+        print(f'Раунд {count}')
+        print(f'Игрок {player["name"]}, осталось {player["health"]} здоровья')
         print(f'{enemy["name"]} победил!')
         break
     enemy['health'] = attack(enemy, player)
     if enemy['health'] < 0:
-        print(enemy)
+        print(f'Раунд {count}')
+        print(f'Игрок {enemy["name"]}, осталось {enemy["health"]} здоровья')
         print(f'{player["name"]} победил!')
         break
-    print(player)
-    print(enemy)
+    print(f'Раунд {count}')
+    print(f'Игрок {player["name"]}, осталось {player["health"]} здоровья')
+    print(f'Игрок {enemy["name"]}, осталось {enemy["health"]} здоровья')
