@@ -19,8 +19,13 @@
 # Примечание. Функция номер 2 используется внутри функции номер 1 для вычисления урона и вычитания его из здоровья персонажа.
 
 def attack(p1, p2):
-    p1['health'] = p1['health'] - p2['damage'] // p1['armor']
+    p1['health'] -= p2['damage'] // p1['armor']
     return p1['health']
+
+
+def damage(p1, p2):
+    p1 = p2['damage'] // p1['armor']
+    return p1
 
 
 player = {'name': '', 'health': 175, 'damage': 55, 'armor': 1.8}
@@ -33,6 +38,8 @@ count = 0
 
 while player['health'] > 0 or enemy['health'] > 0:
     count += 1
+    player_dmg = damage(enemy, player)
+    enemy_dmg = damage(player, enemy)
     player['health'] = attack(player, enemy)
     if player['health'] < 0:
         print(f'Раунд {count}')
@@ -46,5 +53,5 @@ while player['health'] > 0 or enemy['health'] > 0:
         print(f'{player["name"]} победил!')
         break
     print(f'Раунд {count}')
-    print(f'Игрок {player["name"]}, осталось {player["health"]} здоровья')
-    print(f'Игрок {enemy["name"]}, осталось {enemy["health"]} здоровья')
+    print(f'Игрок {player["name"]} получил {enemy_dmg} урон(а), осталось {player["health"]} здоровья')
+    print(f'Игрок {enemy["name"]} получил {player_dmg} урон(а), осталось {enemy["health"]} здоровья')
