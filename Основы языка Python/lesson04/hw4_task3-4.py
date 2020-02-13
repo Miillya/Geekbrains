@@ -53,5 +53,5 @@ while player['health'] > 0 or enemy['health'] > 0:
         print(f'{player["name"]} победил!')
         break
     print(f'Раунд {count}')
-    print(f'Игрок {player["name"]} получил {enemy_dmg} урон(а), осталось {player["health"]} здоровья')
-    print(f'Игрок {enemy["name"]} получил {player_dmg} урон(а), осталось {enemy["health"]} здоровья')
+    print(f'Игрок {player["name"]} получил {enemy_dmg} урона, осталось {player["health"]} здоровья')
+    print(f'Игрок {enemy["name"]} получил {player_dmg} урона, осталось {enemy["health"]} здоровья')
