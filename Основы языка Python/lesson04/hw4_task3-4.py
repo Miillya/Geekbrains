@@ -43,13 +43,13 @@ while player['health'] > 0 or enemy['health'] > 0:
     player['health'] = attack(player, enemy)
     if player['health'] < 0:
         print(f'Раунд {count}')
-        print(f'Игрок {player["name"]}, осталось {player["health"]} здоровья')
+        print(f'Игрок {player["name"]} получил {enemy_dmg} урона, осталось {player["health"]} здоровья')
         print(f'{enemy["name"]} победил!')
         break
     enemy['health'] = attack(enemy, player)
     if enemy['health'] < 0:
         print(f'Раунд {count}')
-        print(f'Игрок {enemy["name"]}, осталось {enemy["health"]} здоровья')
+        print(f'Игрок {enemy["name"]} получил {player_dmg} урона, осталось {enemy["health"]} здоровья')
         print(f'{player["name"]} победил!')
         break
     print(f'Раунд {count}')
