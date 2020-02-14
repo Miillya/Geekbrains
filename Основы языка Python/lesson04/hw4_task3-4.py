@@ -29,17 +29,19 @@ def damage(unit, target):
     return unit
 
 player_name = input('Введите имя Вашего персонажа: ')
-player = {'name': player_name,
-          'health': 175,
-          'damage': 55,
-          'armor': 1.8
+player = {
+    'name': player_name,
+    'health': 175,
+    'damage': 55,
+    'armor': 1.8
 }
 
 enemy_name = input('Введите имя Вашего противника: ')
-enemy = {'name': enemy_name,
-         'health': 100,
-         'damage': 75,
-         'armor': 1.9
+enemy = {
+    'name': enemy_name,
+    'health': 100,
+    'damage': 75,
+    'armor': 1.9
 }
 
 count = 0
