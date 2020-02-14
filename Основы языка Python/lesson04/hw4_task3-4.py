@@ -18,20 +18,20 @@
 #
 # Примечание. Функция номер 2 используется внутри функции номер 1 для вычисления урона и вычитания его из здоровья персонажа.
 
-def attack(p1, p2):
-    p1['health'] -= p2['damage'] // p1['armor']
-    return p1['health']
+def attack(unit, target):
+    unit['health'] -= target['damage'] // unit['armor']
+    return unit['health']
 
 
-def damage(p1, p2):
-    p1 = p2['damage'] // p1['armor']
-    return p1
+def damage(unit, target):
+    unit = target['damage'] // unit['armor']
+    return unit
 
 player_name = input('Введите имя Вашего персонажа: ')
 player = {'name': player_name, 'health': 175, 'damage': 55, 'armor': 1.8}
 
 enemy_name = input('Введите имя Вашего противника: ')
-enemy = {'name': enemy_name, 'health': 100, 'damage': 75, 'armor': 1.7}
+enemy = {'name': enemy_name, 'health': 100, 'damage': 75, 'armor': 1.9}
 
 count = 0
 
