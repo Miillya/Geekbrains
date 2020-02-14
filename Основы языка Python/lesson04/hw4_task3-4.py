@@ -27,12 +27,11 @@ def damage(p1, p2):
     p1 = p2['damage'] // p1['armor']
     return p1
 
+player_name = input('Введите имя Вашего персонажа: ')
+player = {'name': player_name, 'health': 175, 'damage': 55, 'armor': 1.8}
 
-player = {'name': '', 'health': 175, 'damage': 55, 'armor': 1.8}
-enemy = {'name': '', 'health': 100, 'damage': 75, 'armor': 1.7}
-
-player['name'] = input('Введите имя Вашего персонажа: ')
-enemy['name'] = input('Введите имя Вашего противника: ')
+enemy_name = input('Введите имя Вашего противника: ')
+enemy = {'name': enemy_name, 'health': 100, 'damage': 75, 'armor': 1.7}
 
 count = 0
 
