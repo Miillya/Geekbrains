@@ -18,6 +18,7 @@
 #
 # Примечание. Функция номер 2 используется внутри функции номер 1 для вычисления урона и вычитания его из здоровья персонажа.
 
+
 def attack(unit, target):
     unit['health'] -= target['damage'] // unit['armor']
     return unit['health']
@@ -28,10 +29,18 @@ def damage(unit, target):
     return unit
 
 player_name = input('Введите имя Вашего персонажа: ')
-player = {'name': player_name, 'health': 175, 'damage': 55, 'armor': 1.8}
+player = {'name': player_name,
+          'health': 175,
+          'damage': 55,
+          'armor': 1.8
+}
 
 enemy_name = input('Введите имя Вашего противника: ')
-enemy = {'name': enemy_name, 'health': 100, 'damage': 75, 'armor': 1.9}
+enemy = {'name': enemy_name,
+         'health': 100,
+         'damage': 75,
+         'armor': 1.9
+}
 
 count = 0
 
@@ -40,17 +49,21 @@ while player['health'] > 0 or enemy['health'] > 0:
     player_dmg = damage(enemy, player)
     enemy_dmg = damage(player, enemy)
     player['health'] = attack(player, enemy)
+    player_battle_info = f'Игрок {player["name"]} получил {enemy_dmg} урона, осталось {player["health"]} здоровья'
+    enemy_battle_info = f'Игрок {enemy["name"]} получил {player_dmg} урона, осталось {enemy["health"]} здоровья'
+    round_info = f'Раунд {count}'
+
     if player['health'] < 0:
-        print(f'Раунд {count}')
-        print(f'Игрок {player["name"]} получил {enemy_dmg} урона, осталось {player["health"]} здоровья')
+        print(round_info)
+        print(player_battle_info)
         print(f'{enemy["name"]} победил!')
         break
     enemy['health'] = attack(enemy, player)
     if enemy['health'] < 0:
-        print(f'Раунд {count}')
-        print(f'Игрок {enemy["name"]} получил {player_dmg} урона, осталось {enemy["health"]} здоровья')
+        print(round_info)
+        print(enemy_battle_info)
         print(f'{player["name"]} победил!')
         break
-    print(f'Раунд {count}')
-    print(f'Игрок {player["name"]} получил {enemy_dmg} урона, осталось {player["health"]} здоровья')
-    print(f'Игрок {enemy["name"]} получил {player_dmg} урона, осталось {enemy["health"]} здоровья')
+    print(round_info)
+    print(player_battle_info)
+    print(enemy_battle_info)
