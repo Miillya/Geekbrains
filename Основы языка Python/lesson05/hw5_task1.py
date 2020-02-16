@@ -19,7 +19,6 @@ def create_dir():
             print('Директория', dir_name, 'уже существует')
 
 
-# Функция удаления директории:
 def delete_dir():
     i = 1
     while i < 10:
@@ -30,3 +29,8 @@ def delete_dir():
             print('Директория', dir_name, 'удалена!')
         except FileNotFoundError:
             print('Директории', dir_name, 'не существует')
+
+
+if __name__ == '__main__':
+    create_dir()
+    delete_dir()

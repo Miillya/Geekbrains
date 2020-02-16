@@ -12,4 +12,5 @@ create_dir()
 delete_dir()
 
 # Функция выбора случайного элемента из списка, импортированная из модуля hw5_task2
-hw5_task2.choice_list()
+print(hw5_task2.choice_list([1, 'Tamika', 55, 'f7', 731]))
+print(hw5_task2.choice_list([]))

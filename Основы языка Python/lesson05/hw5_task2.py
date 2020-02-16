@@ -3,13 +3,19 @@
 # Примечание: Список для проверки введите вручную. Или возьмите этот: [1, 2, 3, 4]
 import random
 
-my_list = [11, 'Al', 14, 5, 77, 'h1', 'b', 9]
+my_list1 = [11, 'Al', 14, 5, 77, 'h1', 'b', 9]
+my_list2 = []
 
 
 # Функция выбора случайного элемента из списка
-def choice_list():
+def choice_list(my_list):
     if len(my_list) > 0:
         random_choice = random.choice(my_list)
-        print(f'Случайный элемент из списка: {random_choice}')
+        return f'Случайный элемент из списка: {random_choice}'
     else:
-        print(f'Ваш список пуст: {None}')
+        return f'Ваш список пуст: {None}'
+
+
+if __name__ == '__main__':
+    print(choice_list(my_list1))
+    print(choice_list(my_list2))
