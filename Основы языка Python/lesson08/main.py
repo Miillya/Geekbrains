@@ -11,7 +11,7 @@ import sys
 from core import print_help, make_dir, create_file, get_list, copy_folder, copy_file, remove_file, change_dir, save_info
 from guess_the_number import guess_the_number
 
-save_info('Начало')
+save_info('Запуск программы')
 
 try:
     command = sys.argv[1]
@@ -69,8 +69,13 @@ else:
         else:
             remove_file(name)
     elif command == 'cd':
-        change_dir()
+        try:
+            name = sys.argv[2]
+        except IndexError:
+            print('Отсуствует название директории')
+        else:
+            change_dir()
     elif command == 'game':
         guess_the_number()
 
-save_info('Конец')
+save_info('Завершение программы')
