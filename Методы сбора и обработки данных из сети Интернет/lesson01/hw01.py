@@ -33,8 +33,8 @@ if __name__ == '__main__':
     for item in categories:
         parameters = {'records_per_page': 20, 'categories': item['parent_group_code']}
         special_offers = x5ka(URL, parameters)
-        re_name = re.sub(r'[#%!@*/\"\n]', '', item['parent_group_name'])
+        file_name = re.sub(r'[*"\n]', '', item['parent_group_name'])
         if len(special_offers) > 0:
-            with open(f'{re_name}.json', 'w') as file:
+            with open(f'{file_name}.json', 'w') as file:
                 file.write(json.dumps(special_offers))
-                print(f'Файл {re_name}.json записан')
+                print(f'Файл "{file_name}.json" записан')
