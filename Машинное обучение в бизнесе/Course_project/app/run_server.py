@@ -1,9 +1,8 @@
 # USAGE
 # Start the server:
-# 	python run_front_server.py
+# python run_front_server.py
 # Submit a request via Python:
-#	python simple_request.py
-
+# python simple_request.py
 # import the necessary packages
 import dill
 import pandas as pd
