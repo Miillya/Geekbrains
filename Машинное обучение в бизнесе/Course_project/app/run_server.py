@@ -1,18 +1,17 @@
 # USAGE
 # Start the server:
-# python run_front_server.py
-# Submit a request via Python:
-# python simple_request.py
+# 	python run_front_server.py
+
 # import the necessary packages
 import dill
 import pandas as pd
 import os
-dill._dill._reverse_typemap['ClassType'] = type
-#import cloudpickle
 import flask
 import logging
 from logging.handlers import RotatingFileHandler
 from time import strftime
+
+dill._dill._reverse_typemap['ClassType'] = type
 
 # initialize our Flask application and the model
 app = flask.Flask(__name__)
@@ -86,3 +85,5 @@ if __name__ == "__main__":
 		"please wait until server has fully started"))
 	port = int(os.environ.get('PORT', 8180))
 	app.run(host='0.0.0.0', debug=True, port=port)
+
+
