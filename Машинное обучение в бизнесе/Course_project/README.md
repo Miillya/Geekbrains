@@ -5,62 +5,50 @@
 
 ML: sklearn, pandas, numpy  
 API: flask  
-Данные: с kaggle - https://www.kaggle.com/c/catch-me-if-you-can-intruder-detection-through-webpage-session-tracking2   
+Данные: https://archive.ics.uci.edu/ml/datasets/HTRU2   
 
-**Description / Задание:**
+**Data Set Information:**
 
-(Russian version below)
+HTRU2 is a data set which describes a sample of pulsar candidates collected during the High Time Resolution Universe Survey (South) [1].
 
+Pulsars are a rare type of Neutron star that produce radio emission detectable here on Earth. They are of considerable scientific interest as probes of space-time, the inter-stellar medium, and states of matter (see [2] for more uses).
 
-Web-user identification is a hot research topic on the brink of sequential pattern mining and behavioral psychology.
+As pulsars rotate, their emission beam sweeps across the sky, and when this crosses our line of sight, produces a detectable pattern of broadband radio emission. As pulsars
+rotate rapidly, this pattern repeats periodically. Thus pulsar search involves looking for periodic radio signals with large radio telescopes.
 
-Here we try to identify a user on the Internet tracking his/her sequence of attended Web pages. The algorithm to be built will take a webpage session (a sequence of webpages attended consequently by the same person) and predict whether it belongs to Alice or somebody else.
+Each pulsar produces a slightly different emission pattern, which varies slightly with each rotation (see [2] for an introduction to pulsar astrophysics to find out why). Thus a potential signal detection known as a 'candidate', is averaged over many rotations of the pulsar, as determined by the length of an observation. In the absence of additional info, each candidate could potentially describe a real pulsar. However in practice almost all detections are caused by radio frequency interference (RFI) and noise, making legitimate signals hard to find.
 
-The data comes from Blaise Pascal University proxy servers. Paper "A Tool for Classification of Sequential Data" by Giacomo Kahn, Yannick Loiseau and Olivier Raynaud.
+Machine learning tools are now being used to automatically label pulsar candidates to facilitate rapid analysis. Classification systems in particular are being widely adopted,
+(see [4,5,6,7,8,9]) which treat the candidate data sets as binary classification problems. Here the legitimate pulsar examples are a minority positive class, and spurious examples the majority negative class. At present multi-class labels are unavailable, given the costs associated with data annotation.
 
+The data set shared here contains 16,259 spurious examples caused by RFI/noise, and 1,639 real pulsar examples. These examples have all been checked by human annotators.
 
-Будем решать задачу идентификации взломщика по его поведению в сети Интернет. Это сложная и интересная задача на стыке анализа данных и поведенческой психологии. В качестве примера, компания Яндекс решает задачу идентификации взломщика почтового ящика по его поведению. В двух словах, взломщик будет себя вести не так, как владелец ящика: он может не удалять сообщения сразу по прочтении, как это делал хозяин, он будет по-другому ставить флажки сообщениям и даже по-своему двигать мышкой. Тогда такого злоумышленника можно идентифицировать и "выкинуть" из почтового ящика, предложив хозяину войти по SMS-коду. Этот пилотный проект описан в статье на Хабрахабре. Похожие вещи делаются, например, в Google Analytics и описываются в научных статьях, найти можно многое по фразам "Traversal Pattern Mining" и "Sequential Pattern Mining".
+The data is presented in two formats: CSV and ARFF (used by the WEKA data mining tool). Candidates are stored in both files in separate rows. Each row lists the variables first, and the class label is the final entry. The class labels used are 0 (negative) and 1 (positive).
 
-В этом соревновании будем решать похожую задачу: алгоритм будет анализировать последовательность из нескольких веб-сайтов, посещенных подряд одним и тем же человеком, и определять, Элис это или взломщик (кто-то другой).
-
-Данные собраны с прокси-серверов Университета Блеза Паскаля. "A Tool for Classification of Sequential Data", авторы Giacomo Kahn, Yannick Loiseau и Olivier Raynaud.
+Please note that the data contains no positional information or other astronomical details. It is simply feature data extracted from candidate files using the PulsarFeatureLab tool (see [10]).
 
 **Target / Целевая переменная:**
 
 Target
 
-**Evaluation / Метрика для оценки:**
+**Attribute Information:**
 
+Each candidate is described by 8 continuous variables, and a single class variable. The first four are simple statistics obtained from the integrated pulse profile (folded profile). This is an array of continuous variables that describe a longitude-resolved version of the signal that has been averaged in both time and frequency (see [3] for more details). The remaining four variables are similarly obtained from the DM-SNR curve (again see [3] for more details). These are summarised below:
 
-The target metric is ROC AUC. / Целевая метрика – ROC AUC.
+1. Mean of the integrated profile.
+2. Standard deviation of the integrated profile.
+3. Excess kurtosis of the integrated profile.
+4. Skewness of the integrated profile.
+5. Mean of the DM-SNR curve.
+6. Standard deviation of the DM-SNR curve.
+7. Excess kurtosis of the DM-SNR curve.
+8. Skewness of the DM-SNR curve.
+9. Class
 
-**Data Description**
-
-(Russian version below)
-
-The train set train_sessions.csv contains information on user browsing sessions where the features are:
-
-site_i – are ids of sites in this session. The mapping is given with a pickled dictionary site_dic.pkl
-time_j – are timestamps of attending the corresponding site
-target – whether this session belongs to Alice
-One can use the original data train.zip to form a train set differing from train_sessions.csv.
-
-
-В обучающей выборке train_sessions.csv:
-
-Признаки site_i – это индексы посещенных сайтов (расшифровка дана в pickle-файле со словарем site_dic.pkl)
-Признаки time_j – время посещения сайтов site_j
-Целевой признак target – факт того, что сессия принадлежит Элис (то есть что именно Элис ходила по всем этим сайтам)
-Задача – сделать прогнозы для сессий в тестовой выборке (test_sessions.csv), определить, принадлежат ли они Элис. Не обязательно ограничиваться только предложенной выборкой train_sessions.csv – в train.zip даны исходные данные о посещенных пользователями веб-страницах, по которым можно сформировать свою обучающую выборку.
-
-### Описание датасета:
-
-* **site1** - индекс 1-го посещенного сайта в сессии
-* **time1** - время посещения 1-го сайта в сессии
-* **...**
-* **site10** - индекс 10-го посещенного сайта в сессии
-* **time10** - время посещения 10-го сайта в сессии
-* **target** – целевая переменная, принимает значение 1 для сессий Элис и 0 для сессий других пользователей
+HTRU 2 Summary  
+17,898 total examples.  
+1,639 positive examples.  
+16,259 negative examples.  
 
 ### Клонируем репозиторий и создаем образ
 ```
