@@ -52,14 +52,14 @@ HTRU 2 Summary
 
 ### Клонируем репозиторий и создаем образ
 ```
-$ git clone https://github.com/busiko7/Geekbrains/tree/master/%D0%9C%D0%B0%D1%88%D0%B8%D0%BD%D0%BD%D0%BE%D0%B5%20%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B5/course_project
-$ cd C:\Users\Admin\Desktop\Geekbrains\Машинное обучение в бизнесе\course_project
+$ git clone https://github.com/busiko7/Geekbrains/tree/master/machine_learning_in_business/course_project
+$ cd C:\Users\Admin\Desktop\Geekbrains\machine_learning_in_business\course_project
 $ docker build -t course_project .
 ```
 
 ### Запускаем контейнер
 ```
-$ docker run -d -p 8180:8180 -p 8181:8181 course_project
+$ docker run -d -p 8180:8180 course_project
 ```
 
 ### Переходим на localhost:8181

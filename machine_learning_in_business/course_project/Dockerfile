@@ -10,7 +10,7 @@ RUN pip install -r requirements.txt
 # Expose port
 #ENV PORT 8080
 EXPOSE 8180
-EXPOSE 8181
+#EXPOSE 8181
 
 COPY ./docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
