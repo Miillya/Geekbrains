@@ -1,17 +1,18 @@
 FROM python:3.7
-LABEL maintainer="tankov457@gmail.com"
+
+RUN pip install virtualenv
+ENV VIRTUAL_ENV=/venv
+RUN virtualenv venv -p python3
+ENV PATH="VIRTUAL_ENV/bin:$PATH"
 
 WORKDIR /app
-COPY . /app
+ADD . /app
 
 # Install dependencies
 RUN pip install -r requirements.txt
 
-# Expose port
-#ENV PORT 8080
-EXPOSE 8180
-#EXPOSE 8181
+# Expose port 
+ENV PORT 8080
 
-COPY ./docker-entrypoint.sh /
-RUN chmod +x /docker-entrypoint.sh
-ENTRYPOINT ["/docker-entrypoint.sh"]
+# Run the application:
+CMD ["gunicorn", "app:app", "--config=config.py"]

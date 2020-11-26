@@ -59,7 +59,7 @@ $ docker build -t course_project .
 
 ### Запускаем контейнер
 ```
-$ docker run -d -p 8180:8180 course_project
+$ docker run -d -p 8180:8180 -p 8181:8181 course_project
 ```
 
 ### Переходим на localhost:8181
