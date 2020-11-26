@@ -29,7 +29,7 @@ Please note that the data contains no positional information or other astronomic
 
 **Target / Целевая переменная:**
 
-Target
+Class / Target
 
 **Attribute Information:**
 
@@ -62,4 +62,4 @@ $ docker build -t course_project .
 $ docker run -d -p 8080:8080 course_project
 ```
 
-### Переходим на localhost:8181
+### Переходим на localhost:8080
