@@ -20,23 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a150885-845e-4a9b-ae35-3727279cf470" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Course_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Course_project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/front/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/front/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/HTRU2.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/HTRU2/HTRU_2.arff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/HTRU2/HTRU_2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/HTRU2/Readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/model_cbc.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/run_server.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-entrypoint.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
