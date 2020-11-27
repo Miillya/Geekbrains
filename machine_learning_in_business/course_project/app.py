@@ -26,7 +26,7 @@ def predict():
     data_unseen = pd.DataFrame([final], columns=cols)
     prediction = predict_model(model, data=data_unseen, round=0)
     prediction = int(prediction.Label[0])
-    return render_template('index.html', pred='HTRU2 {}'.format(prediction))
+    return render_template("index.html", pred='Pulsar candidate class - {}'.format(prediction))
 
 
 @app.route('/predict_api', methods=['POST'])
@@ -39,4 +39,4 @@ def predict_api():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=config.PORT, debug=config.DEBUG_MODE)
+    app.run(host="127.0.0.1", port=config.PORT, debug=config.DEBUG_MODE)
