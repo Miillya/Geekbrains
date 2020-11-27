@@ -4,6 +4,7 @@ import pandas as pd
 import pickle
 import numpy as np
 import config
+from pycaret.utils import check_metric
 
 app = Flask(__name__)
 
@@ -26,6 +27,7 @@ def predict():
     data_unseen = pd.DataFrame([final], columns=cols)
     prediction = predict_model(model, data=data_unseen, round=0)
     prediction = int(prediction.Label[0])
+    # scores = check_metric(prediction.Price, prediction.Label, 'AUC')
     return render_template("index.html", pred='Pulsar candidate class - {}'.format(prediction))
 
 

@@ -1778,3 +1778,18 @@ joblib.externals.loky.process_executor.TerminatedWorkerError: A worker process m
                  <catboost.core.CatBoostClassifier object at 0x000001C7B397FE48>]],
          verbose=False)
 2020-11-27 12:29:26,534:INFO:save_model() succesfully completed......................................
+2020-11-27 15:15:52,838:INFO:Initializing predict_model()
+2020-11-27 15:15:52,844:INFO:predict_model(estimator=<catboost.core.CatBoostClassifier object at 0x000001C7B397FE48>, probability_threshold=None, encoded_labels=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2020-11-27 15:15:52,844:INFO:Checking exceptions
+2020-11-27 15:15:52,844:INFO:Preloading libraries
+2020-11-27 15:15:52,847:INFO:Preparing display monitor
+2020-11-27 15:22:28,626:INFO:Initializing predict_model()
+2020-11-27 15:22:28,627:INFO:predict_model(estimator=<catboost.core.CatBoostClassifier object at 0x000001C7B397FE48>, probability_threshold=None, encoded_labels=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2020-11-27 15:22:28,627:INFO:Checking exceptions
+2020-11-27 15:22:28,627:INFO:Preloading libraries
+2020-11-27 15:22:28,628:INFO:Preparing display monitor
+2020-11-27 16:20:01,695:INFO:Initializing predict_model()
+2020-11-27 16:20:01,695:INFO:predict_model(estimator=<catboost.core.CatBoostClassifier object at 0x000001C7B397FE48>, probability_threshold=None, encoded_labels=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2020-11-27 16:20:01,696:INFO:Checking exceptions
+2020-11-27 16:20:01,696:INFO:Preloading libraries
+2020-11-27 16:20:01,696:INFO:Preparing display monitor
