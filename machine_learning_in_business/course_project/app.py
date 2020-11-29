@@ -5,6 +5,7 @@ import pickle
 import numpy as np
 import config
 from pycaret.utils import check_metric
+from sklearn.metrics import roc_auc_score
 
 app = Flask(__name__)
 
@@ -27,8 +28,9 @@ def predict():
     data_unseen = pd.DataFrame([final], columns=cols)
     prediction = predict_model(model, data=data_unseen, round=0)
     prediction = int(prediction.Label[0])
-    # scores = check_metric(prediction.Price, prediction.Label, 'AUC')
-    return render_template("index.html", pred='Pulsar candidate class - {}'.format(prediction))
+    scores = []
+    return render_template("index.html", pred='Pulsar candidate class - {}'.format(prediction),
+                           score_auc='roc_auc_score - {}' .format(scores))
 
 
 @app.route('/predict_api', methods=['POST'])
