@@ -6,13 +6,13 @@
   <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/pycaret.png" width="150" title="pycaret">
   <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/flask.png" width="150" alt="flask">
   <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/docker.png" width="150" alt="docker">
-</p>
-**Стек:**  
-ML: Sklearn, Pandas, Numpy, Pycaret  
-API: Flask  
-Данные: https://archive.ics.uci.edu/ml/datasets/HTRU2   
-
-**Data Set Information:**
+</p>  
+**Стек:**   
+ML: Sklearn, Pandas, Numpy, Pycaret   
+API: Flask   
+Данные: https://archive.ics.uci.edu/ml/datasets/HTRU2    
+  
+**Data Set Information:** 
 
 HTRU2 is a data set which describes a sample of pulsar candidates collected during the High Time Resolution Universe Survey (South) [1].
 
