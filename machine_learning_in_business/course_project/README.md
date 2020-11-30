@@ -1,10 +1,10 @@
-# python-flask-docker
+# Python-Flask-Docker
 ### Итоговый проект курса "Машинное обучение в бизнесе"
 
 **Стек:**
 
-ML: sklearn, pandas, numpy  
-API: flask  
+ML: Sklearn, Pandas, Numpy, Pycaret  
+API: Flask  
 Данные: https://archive.ics.uci.edu/ml/datasets/HTRU2   
 
 **Data Set Information:**
@@ -62,4 +62,4 @@ $ docker build -t course_project .
 $ docker run -d -p 8080:8080 course_project
 ```
 
-### Переходим на localhost:8080
+### Переходим на http://localhost:8080 или http://127.0.0.1:8080/ 
