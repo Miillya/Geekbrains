@@ -14,7 +14,7 @@ API: Flask
   
 <h2>Data Set Information:</h2> 
 Data: https://archive.ics.uci.edu/ml/datasets/HTRU2   
-<br>
+
 HTRU2 is a data set which describes a sample of pulsar candidates collected during the High Time Resolution Universe Survey (South) [1].
 
 Pulsars are a rare type of Neutron star that produce radio emission detectable here on Earth. They are of considerable scientific interest as probes of space-time, the inter-stellar medium, and states of matter (see [2] for more uses).
