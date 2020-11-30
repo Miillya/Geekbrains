@@ -1,13 +1,12 @@
+<h1>Итоговый проект курса "Машинное обучение в бизнесе"</h1>
+
 <h1> Python-Flask-Docker</h1>
 <p align="left">
   <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/python.png" width="100" title="python">
   <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/flask.png" width="100" alt="flask">
   <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/docker.png" width="100" alt="docker">
 </p>
-<h2>Итоговый проект курса "Машинное обучение в бизнесе"</h2>
-
 **Стек:**
-
 ML: Sklearn, Pandas, Numpy, Pycaret  
 API: Flask  
 Данные: https://archive.ics.uci.edu/ml/datasets/HTRU2   
