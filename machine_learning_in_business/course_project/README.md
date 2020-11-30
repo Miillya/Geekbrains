@@ -1,4 +1,4 @@
-<h1>Итоговый проект курса "Машинное обучение в бизнесе"</h1>
+<h1>Итоговый проект курса «Машинное обучение в бизнесе»</h1>
 
 <p align="left">
   <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/python.png" width="150" title="python">
@@ -33,7 +33,7 @@ The data is presented in two formats: CSV and ARFF (used by the WEKA data mining
 
 Please note that the data contains no positional information or other astronomical details. It is simply feature data extracted from candidate files using the PulsarFeatureLab tool (see [10]).
 
-**Target / Целевая переменная:**
+**Target:**
 
 Class / Target
 
@@ -56,16 +56,16 @@ HTRU 2 Summary
 1,639 positive examples.  
 16,259 negative examples.  
 
-### Клонируем репозиторий и создаем образ
+### Clone repository and create project
 ```
 $ git clone https://github.com/busiko7/Geekbrains/tree/master/machine_learning_in_business/course_project
 $ cd C:\Users\Admin\Desktop\Geekbrains\machine_learning_in_business\course_project
 $ docker build -t course_project .
 ```
 
-### Запускаем контейнер
+### Run docker
 ```
 $ docker run -d -p 8080:8080 course_project
 ```
 
-### Переходим на http://localhost:8080 или http://127.0.0.1:8080/ 
+### Go to http://localhost:8080 or http://127.0.0.1:8080/ 
