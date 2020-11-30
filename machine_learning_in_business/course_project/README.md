@@ -11,9 +11,9 @@
 ML: Sklearn, Pandas, Numpy, Pycaret
 
 API: Flask  
-Данные: https://archive.ics.uci.edu/ml/datasets/HTRU2    
   
 <h2>Data Set Information:</h2> 
+Data: https://archive.ics.uci.edu/ml/datasets/HTRU2   
 
 HTRU2 is a data set which describes a sample of pulsar candidates collected during the High Time Resolution Universe Survey (South) [1].
 
