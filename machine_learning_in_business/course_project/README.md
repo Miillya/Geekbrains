@@ -1,4 +1,5 @@
 # Python-Flask-Docker
+![alt text](https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/python.png)
 ### Итоговый проект курса "Машинное обучение в бизнесе"
 
 **Стек:**
