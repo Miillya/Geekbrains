@@ -1,8 +1,8 @@
 # Python-Flask-Docker
 <p align="left">
-  <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/python.png" width="150" title="python">
-  <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/flask.png" width="150" alt="flask">
-  <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/docker.png" width="150" alt="docker">
+  <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/python.png" width="100" title="python">
+  <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/flask.png" width="100" alt="flask">
+  <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/docker.png" width="100" alt="docker">
 </p>
 ### Итоговый проект курса "Машинное обучение в бизнесе"
 
