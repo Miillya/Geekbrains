@@ -2,6 +2,11 @@
 ![alt text](https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/python.png)
 ![alt text](https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/flask.png)
 ![alt text](https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/docker.png)
+<p align="left">
+  <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/python.png" width="350" title="python">
+  <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/flask.png" width="350" alt="flask">
+  <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/docker.png" width="350" alt="docker">
+</p>
 ### Итоговый проект курса "Машинное обучение в бизнесе"
 
 **Стек:**
