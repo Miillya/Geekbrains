@@ -4,7 +4,7 @@
   <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/flask.png" width="100" alt="flask">
   <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/docker.png" width="100" alt="docker">
 </p>
-Итоговый проект курса "Машинное обучение в бизнесе"
+<h2>Итоговый проект курса "Машинное обучение в бизнесе"</h2>
 
 **Стек:**
 
