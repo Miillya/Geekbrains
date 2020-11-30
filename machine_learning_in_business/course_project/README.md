@@ -7,7 +7,7 @@
   <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/flask.png" width="150" alt="flask">
   <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/docker.png" width="150" alt="docker">
 </p>  
-<h2>Стек:</h2>
+<h2>Technology Stack:</h2>
 ML: Sklearn, Pandas, Numpy, Pycaret
 
 API: Flask  
