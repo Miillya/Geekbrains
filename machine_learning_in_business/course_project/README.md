@@ -57,6 +57,7 @@ HTRU 2 Summary
 16,259 negative examples.  
 
 <h2>Use the Docker command line</h2>  
+
 ### Clone repository and create project
 ```
 $ git clone https://github.com/busiko7/Geekbrains/tree/master/machine_learning_in_business/course_project
