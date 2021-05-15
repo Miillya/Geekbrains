@@ -9,7 +9,7 @@ from pycaret.utils import check_metric
 
 app = Flask(__name__)
 
-model = load_model('model_cbc')
+model = load_model('models/model_cbc')
 cols = ['Mean of the integrated profile', 'Standard deviation of the integrated profile',
         'Excess kurtosis of the integrated profile', 'Skewness of the integrated profile',
         'Mean of the DM-SNR curve', 'Standard deviation of the DM-SNR curve',
