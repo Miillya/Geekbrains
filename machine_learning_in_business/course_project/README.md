@@ -1,6 +1,8 @@
 <h1>Итоговый проект курса «Машинное обучение в бизнесе»</h1>
 
-![HTRU2](/static/image/htru2.gif)
+![Alt Text]('/static/image/htru2.gif')
+
+###
 
 <p align="left">
   <img src="https://github.com/busiko7/Geekbrains/blob/master/machine_learning_in_business/course_project/static/image/python.png" width="150" title="python">
