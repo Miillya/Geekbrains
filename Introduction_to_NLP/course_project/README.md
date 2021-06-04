@@ -1,8 +1,6 @@
 <h1>Итоговый проект курса «Введение в обработку естественного языка»</h1>
 
-![HTRU2](data/image/bot.gif)
-
-##
+<!--![HTRU2](data/image/bot.gif)-->
 
 ## Description of projects
 
@@ -15,5 +13,3 @@
 <h2>Data Set Information:</h2> 
 
 Вопросы и ответы Mail.ru, для построения вопросно-ответной системы чат бота.
-
-<h2>Use the Docker command line</h2>  
