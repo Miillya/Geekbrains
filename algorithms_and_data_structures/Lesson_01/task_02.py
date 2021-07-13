@@ -16,4 +16,4 @@ if x1 == x2:
 else:
     k = (y1 - y2) / (x1 - x2)
     b = y2 - k * x2
-    print(f'y = {k:.2f} * x + {b:.3f}')
+    print(f'y = {k:.2f} * x + {b:.2f}')
