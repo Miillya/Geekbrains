@@ -29,6 +29,3 @@ num_start = ord(input('Начало диапазона: '))
 num_end = ord(input('Конец диапазона: '))
 result_c = random.randint(num_start, num_end)
 print(chr(result_c))
-
-
-
